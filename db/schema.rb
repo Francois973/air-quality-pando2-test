@@ -10,27 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_10_150018) do
+ActiveRecord::Schema[7.0].define(version: 20_230_210_150_018) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "measures", force: :cascade do |t|
-    t.bigint "room_id", null: false
-    t.integer "co2"
-    t.integer "hum"
-    t.integer "tmp"
-    t.integer "voct"
-    t.datetime "timestamp"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_measures_on_room_id"
+  create_table 'measures', force: :cascade do |t|
+    t.bigint 'room_id', null: false
+    t.integer 'co2'
+    t.integer 'hum'
+    t.integer 'tmp'
+    t.integer 'voct'
+    t.datetime 'timestamp'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['room_id'], name: 'index_measures_on_room_id'
   end
 
-  create_table "rooms", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'rooms', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  add_foreign_key "measures", "rooms"
+  add_foreign_key 'measures', 'rooms'
 end
