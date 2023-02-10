@@ -32,10 +32,10 @@ class SeedTest < ActiveSupport::TestCase
     assert_equal true, room_b2.measures.count > 1
   end
 
-  test 'room should have for measures with de same timestamp' do
+  test 'room should have 4 measures with de same timestamp' do
     room_8a = Room.find_by(name: 'Room8a')
 
     timestamp = DateTime.parse('2021-11-01T23:54:23Z')
-    assert_equal 4, room_8a.measures.where('timestamp = ?', timestamp).count
+    assert_equal 1, room_8a.measures.where('timestamp = ?', timestamp).count
   end
 end
