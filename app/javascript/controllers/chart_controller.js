@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
+
 import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
 
