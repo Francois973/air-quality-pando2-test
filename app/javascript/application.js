@@ -2,3 +2,5 @@
 import "@hotwired/turbo-rails";
 import "controllers";
 import "chart.js";
+import "moment";
+import "chartjs-adapter-moment";
