@@ -6,7 +6,6 @@ import "chartjs-adapter-moment";
 // console.log(moment);
 export default class extends Controller {
   static targets = ["room8a", "room8f", "roomb2"];
-
   connect() {
     console.log("------>");
     this.fetchData();
@@ -119,9 +118,8 @@ export default class extends Controller {
             type: "time",
             time: {
               unit: "minute",
-              displayFormats: {
-                minute: "mm",
-              },
+              stepSize: 10,
+              tooltipFormat: "HH:mm",
             },
             display: false,
             distribution: "linear",
