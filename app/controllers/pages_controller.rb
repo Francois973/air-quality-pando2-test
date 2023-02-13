@@ -6,7 +6,6 @@ class PagesController < ApplicationController
     measure_types = format_datas(measures, rooms)
 
     @datas = fill_datas_measures(measure_types, rooms, measures)
-    ap @datas
   end
 
   private
