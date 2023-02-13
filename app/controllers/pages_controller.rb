@@ -1,12 +1,17 @@
 class PagesController < ApplicationController
   def home
+    rooms_params = params[:rooms].split(',') if params[:rooms].present?
+    measures_params = params[:measures].split(',') if params[:measures].present?
+
     measures = Measure.order(measured_at: :asc)
+    measures = measures.where(room: rooms_params) if rooms_params
+    measures = measures.where(category: measures_params) if measures_params
+
     rooms = measures.pluck(:room).uniq
 
     measure_types = format_datas(measures, rooms)
 
     @datas = fill_datas_measures(measure_types, rooms, measures)
-    ap @datas
   end
 
   private

@@ -1,2 +1,13 @@
 <div class="container" data-controller="chart" data-chart-data-value="<%= @datas.to_json %>">
+  <img src="https://enless-wireless.com/wp-content/uploads/2020/12/Logo-Pando2-960x314.png" alt="Nature" width="270" height="100">
+  <div class=rooms-filter>
+    <%= form_tag root_path, method: :get do %>
+        <%= select_tag :rooms, options_for_select([["Room 8A"], ["Room 8F"], ["Room B2"]], params[:rooms]), prompt: "Rooms", class: "input"%>
+        <%= select_tag :measures, options_for_select([["CO2"], ["HUM"], ["TMP"], ["VOCT"]], params[:measures]),  prompt: "Parameters", class: "input" %>
+        <%= submit_tag "Filter", class: "btn", id: "btn-filter" %>
+      <% end %>
+    <%= form_tag root_path, method: :get do %>
+      <%= button_tag "Reset", type: "submit", class: "btn", id: "reset-btn" %>
+    <% end %>
+  </div>
 </div>
