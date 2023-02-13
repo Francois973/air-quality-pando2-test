@@ -6,6 +6,7 @@ class PagesController < ApplicationController
     measure_types = format_datas(measures, rooms)
 
     @datas = fill_datas_measures(measure_types, rooms, measures)
+    ap @datas
   end
 
   private
@@ -16,7 +17,7 @@ class PagesController < ApplicationController
 
       currency_measure['labels'] = [] unless currency_measure['labels']
       currency_measure['labels'] << measure_db.measured_at
-      ap rooms
+
       rooms.each do |room|
         currency_measure[room] << measure_db.value if measure_db.room == room
         currency_measure[room] << nil unless measure_db.room == room
