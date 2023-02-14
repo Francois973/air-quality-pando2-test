@@ -1,0 +1,22 @@
+{
+  "CO2": {
+    "Room 8A": [],
+    "Room 8F": [],
+    "Room B2": []
+  },
+  "HUM": {
+    "Room 8A": [],
+    "Room 8F": [],
+    "Room B2": []
+  },
+  "TMP": {
+    "Room 8A": [],
+    "Room 8F": [],
+    "Room B2": []
+  },
+  "VOCT": {
+    "Room 8A": [],
+    "Room 8F": [],
+    "Room B2": []
+  }
+}
