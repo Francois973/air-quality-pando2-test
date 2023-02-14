@@ -6,6 +6,7 @@ This application allows you to visualize and analyze the measurements of differe
 
 - Ruby 3.1.2
 - Ruby on Rails 7.0.4 
+- Stimulus v3.2.0
 - Postgresql 14.7
 
 ## Difficulties
@@ -37,3 +38,53 @@ At the beginning, I chose a database schema with a table rooms and measures beca
 
 }
 ```
+
+## Getting started and pre-requisites
+
+### Versions
+
+```sh
+Ruby 3.1.2
+Rails 7.0.4.1
+Docker Compose version v2.15.1
+```
+### Clonage
+
+```sh
+git clone git@github.com:Francois973/automatic-moderator.git
+```
+
+## Running app
+
+### Setup
+
+This action will launch all the commands to install everything the application needs to work.
+
+```sh
+docker-compose up
+```
+
+### Create database
+
+```sh
+docker-compose exec app bin/rails db:create
+```
+
+### Migrate schema
+
+```sh
+docker-compose exec app bin/rails db:migrate
+```
+
+### Fill database
+
+```sh
+docker-compose exec app bin/rails db:seed
+```
+
+### Start 🚀
+
+```sh
+docker-compose up
+```
+------> Start [https://localhost:3000](https://localhost:3000) 💎
