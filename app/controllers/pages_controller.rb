@@ -4,7 +4,6 @@ class PagesController < ApplicationController
     measures_params = params[:measures].split(',') if params[:measures].present?
 
     measures = Measure.order(measured_at: :asc)
-    ap measures
     measures = measures.where(room: rooms_params) if rooms_params
     measures = measures.where(category: measures_params) if measures_params
 
