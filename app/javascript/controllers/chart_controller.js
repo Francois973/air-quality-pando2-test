@@ -9,7 +9,6 @@ export default class extends Controller {
   };
   connect() {
     console.log("------>");
-    console.log(this.dataValue);
     Object.entries(this.dataValue).forEach(([measureType, values]) => {
       this.draw(measureType, values);
     });
