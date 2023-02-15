@@ -7,6 +7,7 @@ This application allows you to visualize and analyze the measurements of differe
 - Ruby 3.1.2
 - Ruby on Rails 7.0.4 
 - Stimulus v3.2.0
+- Chartjs 4.2.1
 - Postgresql 14.7
 
 ## Difficulties
